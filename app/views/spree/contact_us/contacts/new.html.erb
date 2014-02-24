@@ -33,19 +33,24 @@
     <span class="required">*</span><br/>
     <%= f.email_field :email, class: 'required email' %>
   </p>
-  <% if SpreeContactUs.require_subject %>
     <p>
-      <%= f.label :subject %>
-      <span class="required">*</span><br/>
-      <%= f.text_field :subject, class: 'required' %>
+    <%= f.label :phone %>
+    <span class="required">*</span><br/>
+    <%= f.text_field :phone, class: 'required phone' %>
     </p>
-  <% end %>
-  <p>
+    <% if SpreeContactUs.require_subject %>
+        <p>
+        <%= f.label :subject %>
+        <span class="required">*</span><br/>
+        <%= f.text_field :subject, class: 'required' %>
+        </p>
+    <% end %>
+    <p>
     <%= f.label :message %>
     <span class="required">*</span><br/>
     <%= f.text_area :message, class: 'required' %>
-  </p>
-  <p>
+    </p>
+    <p>
     <%= f.submit Spree.t(:submit), :alt => Spree.t(:submit), :id => 'contact_us_contact_submit', :title => Spree.t(:submit) %>
-  </p>
+    </p>
 <% end %>
