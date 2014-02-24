@@ -2,5 +2,5 @@
 Deface::Override.new(:virtual_path => "spree/shared/_footer",
                      :name => "contact_us_in_footer",
                      :insert_bottom => "#footer-pages ul",
-                     :text => "<li id='<%= (request.fullpath.gsub('//','/') == '/contact') ? 'current' : '/contact-link'%>'><%= link_to Spree.t(:contact_us_title), '/contact'  %></li>",
+                     :text => "<li id='<%= (request.fullpath.gsub('//','/') == '/contact') ? '/contact-link' : '/contact-link'%>'><%= link_to Spree.t(:contact_us_title), '/contact'  %></li>",
                      :original => '45ce7795da02814069b4c8421126cecb872df0d1')
