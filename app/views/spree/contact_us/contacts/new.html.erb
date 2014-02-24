@@ -12,13 +12,14 @@
 
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @contact } %>
 
+<h1><%= Spree.t(:contact_us_title) %></h1>
+
 <p>Please don't hesitate to contact us with any questions you may have, either by phone or the contact form below. We look forward to being able to serve you!</p>
 
 <h4><b>Toll-Free Phone:</b> (888) 606-4517</h4>
 <br/>
 <h3>Ask a Question Below</h3>
 
-<h1><%= Spree.t(:contact_us_title) %></h1>
 <%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
   <% if SpreeContactUs.require_name %>
     <p>
